@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}TechZone — Premium Computer Accessories{% endblock %}
+
+{% block content %}
+<!-- ── HERO ──────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="pulse"></span> New Arrivals Just Dropped</div>
+    <h1>
+      Level Up Your<br>
+      <span class="line-glow">Setup Game</span>
+    </h1>
+    <p class="hero-sub">Discover premium computer accessories engineered for performance. From mechanical keyboards to 4K monitors — your perfect setup starts here.</p>
+    <div class="hero-actions">
+      <a href="/products" class="btn-primary">🛍️ Shop Now</a>
+      <a href="/register" class="btn-secondary">✨ Join TechZone</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Products</div></div>
+      <div class="stat-item"><div class="stat-number">50K+</div><div class="stat-label">Customers</div></div>
+      <div class="stat-item"><div class="stat-number">4.9★</div><div class="stat-label">Rating</div></div>
+      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ──────────────────────────── -->
+<div class="features-strip">
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon">🚀</div>
+      <div class="feature-title">Fast Shipping</div>
+      <div class="feature-desc">Free delivery on orders over $100</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title">Secure Checkout</div>
+      <div class="feature-desc">SSL encrypted payments</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">↩️</div>
+      <div class="feature-title">30-Day Returns</div>
+      <div class="feature-desc">Hassle-free return policy</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">💬</div>
+      <div class="feature-title">24/7 Support</div>
+      <div class="feature-desc">We're always here to help</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FEATURED PRODUCTS ─────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">🔥 Top Picks</span>
+      <h2 class="section-title">Featured <span>Products</span></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="keyboards">Keyboards</button>
+      <button class="filter-tab" data-filter="mice">Mice</button>
+      <button class="filter-tab" data-filter="monitors">Monitors</button>
+      <button class="filter-tab" data-filter="headsets">Headsets</button>
+      <button class="filter-tab" data-filter="accessories">Accessories</button>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="/products" class="btn-primary">View All Products →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/products.js') }}"></script>
+{% endblock %}
